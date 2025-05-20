@@ -13,12 +13,12 @@
 import { fb_initialise }
     from './script.mjs';
     window.fb_initialise   = fb_initialise;
-
+/*
 import { fb_authenticate }
     from './script.mjs';
     window.fb_authenticate   = fb_authenticate;
 
-
+*/
 /**************************************************************/
 // index.html main code
 /**************************************************************/

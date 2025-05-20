@@ -2,15 +2,10 @@
 // Import all external constants & functions required
 /**************************************************************/
 // Import all the methods you want to call from the firebase modules
- alert( onclick=fb_initialise ());
-
-
- 
-
-
-import { initializeApp }    from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+fb_initialise()
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getDatabase}  from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+/*import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";*/
 /**************************************************************/
 //Firevase Configuration
 /**************************************************************/
@@ -29,10 +24,10 @@ const FB_GAMECONFIG = {
 /**************************************************************/
 export { 
     fb_initialise };
-
+/*
 export { 
     fb_authenticate };
-
+*/
 
 
 /**************************************************************/
@@ -41,19 +36,16 @@ export {
 /**************************************************************/
 
 function fb_initialise() {
-    console.log('%c fb_initialise(): ', 
-                
-    
-                const FB_GAMEAPP = initializeApp(FB_GAMECONFIG);    
-                const FB_GAMEDB = getDatabase(FB_GAMEAPP);           
-                console.info(FB_GAMEDB);                          
-            
-                const statusEl = document.getElementById("p_fbInitialise");
-                if (statusEl) {
-                    statusEl.innerHTML = "Initialised";
-                }
+    console.log('%c fb_initialise(): ')
+        const FB_GAMEAPP = initializeApp(FB_GAMECONFIG);    
+        const FB_GAMEDB = getDatabase(FB_GAMEAPP);           
+        console.info(FB_GAMEDB);                                     
+        const statusEl = document.getElementById("p_fbInitialise");
+        if (statusEl) {
+            statusEl.innerHTML = "Initialised";
+        }
 }
-
+/* 
 function fb_authenticate(){
     const AUTH = getAuth();
     const PROVIDER = new GoogleAuthProvider();
